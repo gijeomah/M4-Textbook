@@ -23,14 +23,15 @@ function setupForm(){
       document.getElementById("makeBook").checked = false;
       document.getElementById("photoRights").checked = false;
       document.getElementById("photoDist").value = 0;
-
       getEstimate();
+
       // Event Handlers
       document.getElementById("photoNum").onchange = getEstimate;
       document.getElementById("photoHrs").onchange = getEstimate;
       document.getElementById("photoDist").onchange = getEstimate;
       document.getElementById("makeBook").onchange = getEstimate;
       document.getElementById("photoRights").onchange = getEstimate;
+}
 
 //estimate total cost 
 function getEstimate(){
@@ -46,6 +47,5 @@ function getEstimate(){
       totalCost += buyRights ? REPRO_COST: 0;
       document.getElementById("estimate").innerHTML = "$" + totalCost;
 
+}
 
-}
-}
